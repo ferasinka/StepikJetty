@@ -2,6 +2,8 @@ package servlets;
 
 import accounts.AccountService;
 import accounts.UserProfile;
+import dbservice.DBException;
+import dbservice.DBService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +13,7 @@ import java.io.IOException;
 
 public class SignUpServlet extends HttpServlet {
 	private final AccountService accountService;
+	private static final DBService dbService = new DBService();
 
 	public SignUpServlet(AccountService accountService) {
 		this.accountService = accountService;
@@ -30,6 +33,12 @@ public class SignUpServlet extends HttpServlet {
 
 		UserProfile profile = new UserProfile(login, pass, "test@test.test");
 
-		accountService.addNewUser(profile);
+//		accountService.addNewUser(profile);
+		
+		try {
+			dbService.addUser(profile.getLogin());
+		} catch (DBException e) {
+			e.printStackTrace();
+		}
 	}
 }
