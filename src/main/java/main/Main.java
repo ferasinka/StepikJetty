@@ -13,7 +13,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import servlets.*;
 
 public class Main {
-	public static final DBService DB_SERVICE_IMPL = new DBServiceImpl();
+//	public static final DBService DB_SERVICE_IMPL = new DBServiceImpl();
 	
 	public static void main(String[] args) throws Exception {
 		AccountService accountService = new AccountService();

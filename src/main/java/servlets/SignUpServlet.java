@@ -34,10 +34,10 @@ public class SignUpServlet extends HttpServlet {
 
 //		accountService.addNewUser(profile);
 		
-		try {
-			Main.DB_SERVICE_IMPL.addUser(profile.getLogin());
-		} catch (DBException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			Main.DB_SERVICE_IMPL.addUser(profile.getLogin());
+//		} catch (DBException e) {
+//			e.printStackTrace();
+//		}
 	}
 }
