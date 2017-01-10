@@ -8,17 +8,33 @@
 	<artifactId>StepikJetty</artifactId>
 	<version>1.0</version>
 
+	<properties>
+		<org.eclipse.jetty.version>9.4.0.v20161208</org.eclipse.jetty.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
-			<version>9.4.0.v20161208</version>
+			<version>${org.eclipse.jetty.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-webapp</artifactId>
-			<version>9.4.0.v20161208</version>
+			<version>${org.eclipse.jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty.websocket</groupId>
+			<artifactId>websocket-servlet</artifactId>
+			<version>${org.eclipse.jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty.websocket</groupId>
+			<artifactId>websocket-server</artifactId>
+			<version>${org.eclipse.jetty.version}</version>
 		</dependency>
 
 		<dependency>
