@@ -2,6 +2,8 @@ package main;
 
 import accounts.AccountService;
 import accounts.UserProfile;
+import dbservice.DBService;
+import dbservice.DBServiceImpl;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -14,6 +16,8 @@ import servlets.SignUpServlet;
 import servlets.UsersServlet;
 
 public class Main {
+	public static final DBService DB_SERVICE_IMPL = new DBServiceImpl();
+	
 	public static void main(String[] args) throws Exception {
 		AccountService accountService = new AccountService();
 
